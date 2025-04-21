@@ -65,6 +65,9 @@ export const NewSurveyPage = () => {
     <>
       {!next ? (
         <>
+          <h1 className="text-center border-lime-200 text-lg text-gray-700 p-5 font-bold">
+            Enter the below Details to create the new Survey
+          </h1>
           <form class="max-w-md mx-auto" onSubmit={nextClick}>
             <div class="relative z-0 w-full mb-5 group">
               <input

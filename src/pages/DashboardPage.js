@@ -30,6 +30,7 @@ export const DashboardPage = () => {
         <>create Your first Survey</>
       ) : (
         <>
+        <h1 className="text-center border-lime-200 text-lg text-gray-700 p-5 font-bold">Please find your Survey details below, Enjoy Creating new Surveys!!</h1>
           {surveys.map((survey) => {
             return (
               <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md p-6">
@@ -72,7 +73,7 @@ export const DashboardPage = () => {
           focus:ring-2 focus:ring-blue-300
         "
       >
-       +
+       Add new Service
       </Link>
     </>
   );
