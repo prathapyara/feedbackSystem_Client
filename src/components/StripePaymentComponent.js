@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 export const StripPageComponent = () => {
   const user = useSelector((state) => state.auth.user);
-  console.log(user);
+
   const handlePayment = async () => {
     try {
       const stripe = await loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
@@ -22,8 +22,6 @@ export const StripPageComponent = () => {
           withCredentials: true,
         }
       );
-
-      console.log(data.sessionId);
 
       if (data.sessionId) {
         const { error } = await stripe.redirectToCheckout({

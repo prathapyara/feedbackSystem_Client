@@ -3,12 +3,11 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { HomePage } from "./pages/Homepage.js";
 import { HeaderComponent } from "./components/HeaderComponent.js";
 import { FooterComponent } from "./components/FooterComponent.js";
-import { SurveyPage } from "./pages/SurveyPage.js";
 import { NewSurveyPage } from "./pages/NewSurveyPage.js";
 import { ProtectRouterComponent } from "./components/ProtectRouterComponent.js";
 import { Success } from "./pages/SuccessPage.js";
 import { Cancel } from "./pages/CancelPage.js";
-
+import { DashboardPage } from "./pages/DashboardPage.js";
 
 function App() {
   return (
@@ -19,7 +18,7 @@ function App() {
           <Routes>
             <Route element={<HomePage />} path="/" />
             <Route element={<ProtectRouterComponent />}>
-              <Route element={<SurveyPage />} path="/surveys" />
+              <Route element={<DashboardPage />} path="/surveys" />
               <Route element={<NewSurveyPage />} path="/surveys/new" />
               <Route element={<Success />} path="/success" />
               <Route element={<Cancel />} path="/cancel" />
